@@ -4,7 +4,7 @@ import urllib.parse
 
 app = Flask(__name__)
 
-password = "MyslJ3@iwin"
+password = "password@123"
 encoded_password = urllib.parse.quote_plus(password)
 
 #old sql db
@@ -62,15 +62,5 @@ if __name__ == '__main__':
     db.create_all()
     app.run(debug=True)
 
-import urllib.parse
 
-'''
-# Original password with "@" symbol
-password = "MyslJ3@iwin"
 
-# Encode the password
-encoded_password = urllib.parse.quote_plus(password)
-
-# Construct the database URI with the encoded password
-app.config['SQLALCHEMY_DATABASE_URI'] = f'mysql+pymysql://root:{encoded_password}@localhost/user_test'
-'''
